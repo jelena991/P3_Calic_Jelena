@@ -1,0 +1,141 @@
+.location {
+  @include flex-centered;
+  background-color: $background-darkergrey;
+  width: 100%;
+  padding: 15px;
+  font-size: 17px;
+
+  h4 {
+    font-weight: 300;
+    margin-left: 15px;
+  }
+}
+
+.explore {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+  p {
+    font-weight: 100;
+    font-size: 18px;
+  }
+}
+
+.intro-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  &__card {
+    padding-left: 30px;
+    margin-left: 25px;
+    background-color: $background-lightgrey;
+    box-shadow: map-get($map: $box-shadows, $key: shadow-light);
+    border-radius: 25px;
+    height: 75px;
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    &--badge {
+      position: absolute;
+      color: #fff;
+      background-color: map-get($map: $main-colors, $key: color-primary);
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      padding: 5px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 30px;
+      left: -15px;
+      z-index: 2;
+    }
+    &--icon {
+      font-size: 25px;
+      color: map-get($map: $main-colors, $key: color-icons);
+      &:hover {
+        color: map-get($map: $main-colors, $key: color-primary);
+      }
+    }
+
+    &--text {
+      font-size: 17px;
+      padding-left: 30px;
+    }
+
+    &:hover {
+      background-color: map-get(
+        $map: $main-colors,
+        $key: color-primary-lightend-high
+      );
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.restaurant-card {
+  height: 100%;
+  box-shadow: map-get($map: $box-shadows, $key: shadow-light);
+  background-color: #fff;
+  border-radius: 25px;
+
+  &__image {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 175px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    padding: 20px;
+    &--icon {
+      align-self: flex-end;
+      flex: 1;
+    }
+    &--text {
+      font-size: 15px;
+      line-height: 24px;
+
+      p {
+        font-weight: 100;
+        font-size: 17px;
+      }
+    }
+  }
+
+  .new-badge {
+    position: absolute;
+    color: map-get($map: $main-colors, $key: color-tertiary-darkened);
+    background-color: map-get(
+      $map: $main-colors,
+      $key: color-tertiary
+    );
+    width: 80px;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 30px;
+    z-index: 2;
+  }
+}

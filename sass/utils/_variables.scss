@@ -3,9 +3,11 @@
 $main-colors: (
   color-primary: #9356dc,
   color-primary-lightend: lighten(#9356dc, 5%),
+  color-primary-lightend-high: lighten(#9356dc, 35%),
   color-secondary: #ff79da,
-  color-secondary-lightend: lighten(#ff79da, 5%),
+  color-secondary-lightend: lighten(#ff79da, 3%),
   color-tertiary: #99e2d0,
+  color-tertiary-darkened: darken(#99e2d0, 40%),
   color-icons: #8c8c8c,
 );
 
@@ -18,8 +20,8 @@ $backgroung-footer: #353535;
 /*SHADOWS*/
 
 $box-shadows: (
-    shadow-light:0 1px 5px rgba(104, 104, 104, 0.8),
-    shadow-dark: 0px 4px 13px -10px #000000,
+    shadow-light:0px 4px 13px -10px #000000,
+    shadow-dark: 0 1px 5px rgba(104, 104, 104, 0.8),
     shadow-intro: 0px 0px 10px
   rgba(
     $color: #000000,
@@ -29,4 +31,5 @@ $box-shadows: (
 
 /*BUTTON COLORS*/
 $background-button: linear-gradient(to top, map-get($main-colors, color-primary), map-get($main-colors, color-secondary));
-$background-button-lighttend: linear-gradient(to top, map-get($main-colors, color-primary-lightend), map-get($main-colors, color-secondary-lightend));
+$background-button-lightend: linear-gradient(to top, map-get($main-colors, color-primary-lightend), map-get($main-colors, color-secondary-lightend));
+

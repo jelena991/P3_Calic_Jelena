@@ -1,0 +1,18 @@
+.button {
+  width: 230px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  background-image: $background-button;
+  box-shadow: map-get($map: $box-shadows, $key: shadow-light);
+  transition: transform 450ms;
+  &:hover {
+    transform: scale(1.13);
+    background-image: $background-button-lightend;
+    box-shadow: map-get($map: $box-shadows, $key: shadow-dark);
+  }
+}
