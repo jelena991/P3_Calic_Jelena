@@ -33,3 +33,11 @@ $box-shadows: (
 $background-button: linear-gradient(to top, map-get($main-colors, color-primary), map-get($main-colors, color-secondary));
 $background-button-lightend: linear-gradient(to top, map-get($main-colors, color-primary-lightend), map-get($main-colors, color-secondary-lightend));
 
+/*BREAKPOINTS*/
+
+$breakpoints: (
+  mobile: 599px,
+  tablet: 600px,
+  desktop: 992px,
+  large-desktop: 1200px,
+);

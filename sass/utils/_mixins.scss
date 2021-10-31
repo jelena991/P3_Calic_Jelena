@@ -4,9 +4,32 @@
     justify-content: center;
 }
 
-
 @mixin flex-between {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@mixin mobile-only {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: mobile )) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: tablet )) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: desktop )) {
+        @content;
+    }
+}
+
+@mixin large-dektops {
+    @media screen and (min-width: map-get($map: $breakpoints, $key: large-desktop )) {
+        @content;
+    }
 }
