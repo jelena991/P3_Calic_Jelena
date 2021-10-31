@@ -1,5 +1,6 @@
 @import "./utils/variables.scss";
 @import "./utils/mixins.scss";
+@import "./utils/keyframes.scss";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./base/config";
@@ -8,3 +9,4 @@
 @import "./components/cards";
 @import "./components/buttons";
 @import "./components/hearts";
+@import "./components/spinner";

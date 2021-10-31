@@ -12,9 +12,20 @@
       display: flex;
       align-items: center;
       gap: 15px;
+      & a:hover {
+        text-decoration: underline;
+      }
     }
     &--item i {
       width: 15px;
     }
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+      @include flex-centered;
+      flex-direction: column;
+    }
+  }
+  @media screen and (min-width: map-get($breakpoints, tablet)) {
+    @include flex-centered;
+    flex-direction: column;
   }
 }

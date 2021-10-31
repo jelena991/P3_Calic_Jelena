@@ -16,6 +16,8 @@ $main-colors: (
 $background-lightgrey: #f6f6f6;
 $background-darkergrey: #eaeaea;
 $backgroung-footer: #353535;
+$background-opacity: rgba($backgroung-footer, .5);
+
 
 /*SHADOWS*/
 
@@ -41,4 +43,12 @@ $breakpoints: (
   large-tablet: 800px,
   desktop: 992px,
   large-desktop: 1200px,
+);
+
+/*DELAYS*/
+
+$delays: (
+  loading_page_delay: 3000ms,
+  main_page_delay: 3500ms,
+  item_delay: 3500ms,
 );
