@@ -38,6 +38,7 @@ $background-button-lightend: linear-gradient(to top, map-get($main-colors, color
 $breakpoints: (
   mobile: 599px,
   tablet: 600px,
+  large-tablet: 800px,
   desktop: 992px,
   large-desktop: 1200px,
 );
