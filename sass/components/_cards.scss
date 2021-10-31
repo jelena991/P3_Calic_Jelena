@@ -15,7 +15,6 @@
   }
   &__card {
     height: 100%;
-    max-width: 500px;
     margin: 30px 0;
 
     @media screen and (min-width: map-get($breakpoints, tablet)) {
