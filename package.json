@@ -1,0 +1,19 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "description": "Project 3 Calic Jelena",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jelena991/P3_Calic_Jelena.git"
+  },
+  "author": "Calic Jelena",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jelena991/P3_Calic_Jelena/issues"
+  },
+  "homepage": "https://github.com/jelena991/P3_Calic_Jelena#readme"
+}
