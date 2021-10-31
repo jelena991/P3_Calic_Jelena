@@ -24,6 +24,13 @@ a {
 
 h2 {
   padding-bottom: 20px;
+  @include tablets {
+    
+    
+      text-align: center;
+      font-size: 30px;
+    
+  }
 }
 
 
