@@ -1,0 +1,88 @@
+.menu {
+  background-color: $background-lightgrey;
+  margin: 0;
+  padding: 35px 20px 50px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -50px;
+  position: relative;
+
+  &-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+  }
+}
+
+.menu-group {
+  &__item {
+    &--title {
+      padding-top: 30px;
+      padding-bottom: 15px;
+
+      text-transform: uppercase;
+      padding-bottom: 5px;
+      font-weight: 300;
+    }
+    &--devider {
+      width: 12%;
+      border: 2px solid map-get($map: $main-colors, $key: color-tertiary);
+    }
+  }
+}
+
+.menu-button {
+  text-align: center;
+  & > button {
+    width: 200px;
+  }
+}
+
+.stack-1 {
+  animation: growDown 800ms map-get($delays, item_delay) linear both;
+  transform-origin: top center;
+}
+
+.stack-2 {
+  animation: growDown 800ms map-get($delays, item_delay) + 500ms linear both;
+  transform-origin: top center;
+}
+
+.stack-3 {
+  animation: growDown 800ms map-get($delays, item_delay) + 1000ms linear both;
+  transform-origin: top center;
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+
+      @for $i from 1 through 4 {
+        .c-#{$i} {
+            transform-origin: top center;
+            animation: slideDown 300ms ($i * 80ms) ease-in forwards;
+        }
+    }
+
+    @keyframes slideDown {
+        0% { 
+          opacity: 0;
+          transform: translateY(-60px);
+        }
+      
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }

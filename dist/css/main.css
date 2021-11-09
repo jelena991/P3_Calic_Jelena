@@ -65,16 +65,14 @@ header {
           justify-content: center;
 }
 
-.header-logo {
-  max-width: 350px;
+.header__logo {
+  max-width: 250px;
 }
 
-.header-icon {
+.header__icon {
+  position: absolute;
+  left: 15px;
   font-size: 20px;
-  padding-left: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
 }
 
 .footer {
@@ -347,6 +345,155 @@ h2 {
   background-color: #f2eafb;
 }
 
+.menu {
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 35px 20px 50px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  margin-top: -50px;
+  position: relative;
+}
+
+.menu-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+}
+
+.menu-group__item--title {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  font-weight: 300;
+}
+
+.menu-group__item--devider {
+  width: 12%;
+  border: 2px solid #99e2d0;
+}
+
+.menu-button {
+  text-align: center;
+}
+
+.menu-button > button {
+  width: 200px;
+}
+
+.stack-1 {
+  -webkit-animation: growDown 800ms 500ms linear both;
+          animation: growDown 800ms 500ms linear both;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.stack-2 {
+  -webkit-animation: growDown 800ms 1000ms linear both;
+          animation: growDown 800ms 1000ms linear both;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+.stack-3 {
+  -webkit-animation: growDown 800ms 1500ms linear both;
+          animation: growDown 800ms 1500ms linear both;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+}
+
+@-webkit-keyframes growDown {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  80% {
+    -webkit-transform: scaleY(1.1);
+            transform: scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes growDown {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  80% {
+    -webkit-transform: scaleY(1.1);
+            transform: scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+.c-1 {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-animation: slideDown 300ms 80ms ease-in forwards;
+          animation: slideDown 300ms 80ms ease-in forwards;
+}
+
+.c-2 {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-animation: slideDown 300ms 160ms ease-in forwards;
+          animation: slideDown 300ms 160ms ease-in forwards;
+}
+
+.c-3 {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-animation: slideDown 300ms 240ms ease-in forwards;
+          animation: slideDown 300ms 240ms ease-in forwards;
+}
+
+.c-4 {
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-animation: slideDown 300ms 320ms ease-in forwards;
+          animation: slideDown 300ms 320ms ease-in forwards;
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .card {
   border-radius: 25px;
   position: relative;
@@ -438,6 +585,76 @@ h2 {
 
 .restaurant__card-content h4 {
   font-weight: 100;
+}
+
+.menu-card {
+  margin-bottom: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-card:hover .tick {
+  width: 75px;
+}
+
+.menu-card:hover .tick-icon {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.menu-card__body {
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+}
+
+.menu-card__body__heading, .menu-card__body__content {
+  margin: 0;
+  text-overflow: ellipsis;
+  /**/
+  overflow: hidden;
+  /*any content that goes outside is hidden*/
+  white-space: nowrap;
+  /*a strict override*/
+}
+
+.menu-card__price {
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tick {
+  width: 0px;
+  background: blue;
+  -webkit-transition: width 1s;
+  transition: width 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tick-icon {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  color: white;
 }
 
 .button {

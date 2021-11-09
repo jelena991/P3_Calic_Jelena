@@ -57,3 +57,51 @@
     }
   }
 }
+
+.menu-card {
+  margin-bottom: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  &:hover {
+    .tick {
+      width: 75px;
+    }
+    .tick-icon {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  }
+  &__body {
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    &__heading,
+    &__content {
+      margin: 0;
+      text-overflow: ellipsis; /**/
+      overflow: hidden; /*any content that goes outside is hidden*/
+      white-space: nowrap; /*a strict override*/
+    }
+  }
+  &__price {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.tick {
+  width: 0px;
+  background: blue;
+  transition: width 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tick-icon {
+  transform: rotate(360deg);
+  transition: transform 1s;
+  color: white;
+}

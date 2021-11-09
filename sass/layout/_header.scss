@@ -9,12 +9,13 @@ header {
   justify-content: center;
 }
 
-.header-logo {
-  max-width: 350px;
-}
-
-.header-icon {
-  font-size: 20px;
-  padding-left: 20px;
-  flex: 0 0 40%;
+.header {
+  &__logo {
+    max-width: 250px;
+  }
+  &__icon {
+    position: absolute;
+    left: 15px;
+    font-size: 20px;
+  }
 }
