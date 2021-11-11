@@ -80,12 +80,11 @@
     padding: 15px;
     font-size: 15px;
 
-    &__heading,
-    &__content {
+    &__heading &__content {
       margin: 0;
       text-overflow: ellipsis; /**/
       overflow: hidden; /*any content that goes outside is hidden*/
-      white-space: wrap; /*a strict override*/
+      white-space: nowrap; /*a strict override*/
     }
   }
 

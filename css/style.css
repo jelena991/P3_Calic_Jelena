@@ -407,13 +407,13 @@ h2 {
   padding: 15px;
   font-size: 15px;
 }
-.menu-card__body__heading, .menu-card__body__content {
+.menu-card__body__heading .menu-card__body__content {
   margin: 0;
   text-overflow: ellipsis;
   /**/
   overflow: hidden;
   /*any content that goes outside is hidden*/
-  white-space: wrap;
+  white-space: nowrap;
   /*a strict override*/
 }
 .menu-card__price {
