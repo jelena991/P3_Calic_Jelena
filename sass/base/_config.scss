@@ -9,8 +9,30 @@ body {
   height: 100vh;
 }
 
-.title {
+.menu-title {
   font-family: "Shrikhand", cursive;
+ 
+}
+
+.menu-group {
+  
+  & h2 {
+    padding-top: 30px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 100;
+  }
+  &__item {
+    
+    &--devider {
+      width: 12%;
+      border: 2px solid map-get($map: $main-colors, $key: color-tertiary);
+      margin-bottom: 25px;
+      @media screen and (min-width: map-get($breakpoints, tablet)) {
+       display: none;
+      }
+    }
+  }
 }
 
 img {
@@ -25,14 +47,10 @@ a {
 h2 {
   padding-bottom: 20px;
   @include tablets {
-    
-    
-      text-align: center;
-      font-size: 30px;
-    
+    text-align: center;
+    font-size: 30px;
   }
 }
-
 
 .py-5 {
   padding: 3rem 1rem 3rem 1rem;

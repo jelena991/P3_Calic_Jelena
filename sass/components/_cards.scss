@@ -59,6 +59,7 @@
 }
 
 .menu-card {
+  background-color: white;
   margin-bottom: 15px;
   overflow: hidden;
   cursor: pointer;
@@ -93,7 +94,7 @@
 
 .tick {
   width: 0px;
-  background: blue;
+  background: map-get($map: $main-colors, $key: color-tertiary);
   transition: width 1s;
   display: flex;
   justify-content: center;
@@ -101,7 +102,7 @@
 }
 
 .tick-icon {
-  transform: rotate(360deg);
+  transform: rotate(180deg);
   transition: transform 1s;
   color: white;
 }

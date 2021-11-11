@@ -1,20 +1,32 @@
-@keyframes opacity{
-    0%{
-        opacity: 1;
-    }
-    99%{
-        opacity: 0;
-        top: 0;
-        bottom: 0;
-    }
-    100%{
-        top: -100000px;
-        bottom: auto;
-    }
+@keyframes opacity {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes loading {
-    to {
-      transform: rotate(1turn);
-    }
+  99% {
+    opacity: 0;
+    top: 0;
+    bottom: 0;
   }
+  100% {
+    top: -100000px;
+    bottom: auto;
+  }
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes growDown {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

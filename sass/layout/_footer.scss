@@ -2,6 +2,7 @@
   background-color: $backgroung-footer;
   color: #fff;
   padding: 35px;
+  position: relative;
   &__logo {
     max-width: 200px;
     padding-bottom: 20px;
@@ -27,5 +28,6 @@
   @media screen and (min-width: map-get($breakpoints, tablet)) {
     @include flex-centered;
     flex-direction: column;
+    top: 230px;
   }
 }

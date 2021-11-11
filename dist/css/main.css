@@ -47,13 +47,44 @@
   }
 }
 
+@-webkit-keyframes growDown {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  80% {
+    -webkit-transform: scaleY(1.1);
+            transform: scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes growDown {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  80% {
+    -webkit-transform: scaleY(1.1);
+            transform: scaleY(1.1);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
 header {
   margin: 0;
   padding: 10px;
+  height: 80px;
+  width: 100%;
   -webkit-box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
           box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-  z-index: 1;
-  position: relative;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,22 +94,37 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: white;
 }
 
-.header__logo {
+.header-menu {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.header-menu__logo {
   max-width: 250px;
 }
 
-.header__icon {
+.header-menu__icon {
   position: absolute;
   left: 15px;
   font-size: 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .header-menu__icon {
+    position: relative;
+    left: -10px;
+  }
 }
 
 .footer {
   background-color: #353535;
   color: #fff;
   padding: 35px;
+  position: relative;
 }
 
 .footer__logo {
@@ -139,6 +185,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    top: 230px;
   }
 }
 
@@ -154,8 +201,27 @@ body {
   height: 100vh;
 }
 
-.title {
+.menu-title {
   font-family: "Shrikhand", cursive;
+}
+
+.menu-group h2 {
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.menu-group__item--devider {
+  width: 12%;
+  border: 2px solid #99e2d0;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 600px) {
+  .menu-group__item--devider {
+    display: none;
+  }
 }
 
 img {
@@ -345,13 +411,24 @@ h2 {
   background-color: #f2eafb;
 }
 
+.restaurant-menu .background-image {
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .restaurant-menu .background-image {
+    position: fixed;
+    height: 100vh;
+  }
+}
+
 .menu {
   background-color: #f6f6f6;
   margin: 0;
   padding: 35px 20px 50px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  margin-top: -50px;
+  top: -50px;
   position: relative;
 }
 
@@ -368,17 +445,12 @@ h2 {
   font-size: 20px;
 }
 
-.menu-group__item--title {
-  padding-top: 30px;
-  padding-bottom: 15px;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-  font-weight: 300;
-}
-
-.menu-group__item--devider {
-  width: 12%;
-  border: 2px solid #99e2d0;
+@media screen and (min-width: 600px) {
+  .menu {
+    top: 150px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 .menu-button {
@@ -389,6 +461,7 @@ h2 {
   width: 200px;
 }
 
+/*Menu Animation*/
 .stack-1 {
   -webkit-animation: growDown 800ms 500ms linear both;
           animation: growDown 800ms 500ms linear both;
@@ -408,90 +481,6 @@ h2 {
           animation: growDown 800ms 1500ms linear both;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-}
-
-@-webkit-keyframes growDown {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-  80% {
-    -webkit-transform: scaleY(1.1);
-            transform: scaleY(1.1);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-
-@keyframes growDown {
-  0% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-  80% {
-    -webkit-transform: scaleY(1.1);
-            transform: scaleY(1.1);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-
-.c-1 {
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-animation: slideDown 300ms 80ms ease-in forwards;
-          animation: slideDown 300ms 80ms ease-in forwards;
-}
-
-.c-2 {
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-animation: slideDown 300ms 160ms ease-in forwards;
-          animation: slideDown 300ms 160ms ease-in forwards;
-}
-
-.c-3 {
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-animation: slideDown 300ms 240ms ease-in forwards;
-          animation: slideDown 300ms 240ms ease-in forwards;
-}
-
-.c-4 {
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
-  -webkit-animation: slideDown 300ms 320ms ease-in forwards;
-          animation: slideDown 300ms 320ms ease-in forwards;
-}
-
-@-webkit-keyframes slideDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-60px);
-            transform: translateY(-60px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-60px);
-            transform: translateY(-60px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
 }
 
 .card {
@@ -588,6 +577,7 @@ h2 {
 }
 
 .menu-card {
+  background-color: white;
   margin-bottom: 15px;
   overflow: hidden;
   cursor: pointer;
@@ -633,7 +623,7 @@ h2 {
 
 .tick {
   width: 0px;
-  background: blue;
+  background: #99e2d0;
   -webkit-transition: width 1s;
   transition: width 1s;
   display: -webkit-box;
@@ -648,8 +638,8 @@ h2 {
 }
 
 .tick-icon {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   transition: transform 1s;
