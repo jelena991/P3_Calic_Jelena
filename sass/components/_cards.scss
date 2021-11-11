@@ -64,6 +64,8 @@
   overflow: hidden;
   cursor: pointer;
   display: flex;
+  position: relative;
+
   &:hover {
     .tick {
       width: 75px;
@@ -77,14 +79,16 @@
     width: 100%;
     padding: 15px;
     font-size: 15px;
+
     &__heading,
     &__content {
       margin: 0;
       text-overflow: ellipsis; /**/
       overflow: hidden; /*any content that goes outside is hidden*/
-      white-space: nowrap; /*a strict override*/
+      white-space: wrap; /*a strict override*/
     }
   }
+
   &__price {
     padding: 0 20px;
     display: flex;

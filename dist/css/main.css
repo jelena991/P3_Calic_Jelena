@@ -584,6 +584,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 
 .menu-card:hover .tick {
@@ -607,7 +608,7 @@ h2 {
   /**/
   overflow: hidden;
   /*any content that goes outside is hidden*/
-  white-space: nowrap;
+  white-space: wrap;
   /*a strict override*/
 }
 

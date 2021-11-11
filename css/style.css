@@ -393,6 +393,7 @@ h2 {
   overflow: hidden;
   cursor: pointer;
   display: flex;
+  position: relative;
 }
 .menu-card:hover .tick {
   width: 75px;
@@ -412,7 +413,7 @@ h2 {
   /**/
   overflow: hidden;
   /*any content that goes outside is hidden*/
-  white-space: nowrap;
+  white-space: wrap;
   /*a strict override*/
 }
 .menu-card__price {
