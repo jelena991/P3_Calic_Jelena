@@ -600,10 +600,12 @@ h2 {
   width: 100%;
   padding: 15px;
   font-size: 15px;
+  overflow: hidden;
 }
 
-.menu-card__body__heading .menu-card__body__content {
+.menu-card__heading, .menu-card__content {
   margin: 0;
+  font-size: 15px;
   text-overflow: ellipsis;
   /**/
   overflow: hidden;

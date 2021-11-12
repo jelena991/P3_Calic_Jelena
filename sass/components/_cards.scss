@@ -79,13 +79,16 @@
     width: 100%;
     padding: 15px;
     font-size: 15px;
+    overflow: hidden;
+  }
 
-    &__heading &__content {
-      margin: 0;
-      text-overflow: ellipsis; /**/
-      overflow: hidden; /*any content that goes outside is hidden*/
-      white-space: nowrap; /*a strict override*/
-    }
+  &__heading,
+  &__content {
+    margin: 0;
+    font-size: 15px;
+    text-overflow: ellipsis; /**/
+    overflow: hidden; /*any content that goes outside is hidden*/
+    white-space: nowrap; /*a strict override*/
   }
 
   &__price {
