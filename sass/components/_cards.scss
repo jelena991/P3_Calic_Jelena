@@ -1,9 +1,13 @@
+/*GENERAL CARD DESIGN*/
+
 .card {
   border-radius: 25px;
   position: relative;
   cursor: pointer;
   box-shadow: map-get($map: $box-shadows, $key: shadow-dark);
 }
+
+/*CARDS ON HOME PAGE*/
 
 .restaurant {
   &__container {
@@ -58,6 +62,8 @@
   }
 }
 
+/*CARDS ON MENU PAGES*/
+
 .menu-card {
   background-color: white;
   margin-bottom: 15px;
@@ -97,6 +103,8 @@
     align-items: center;
   }
 }
+
+/*CHECKMARK ON CARDS ON MENU PAGES*/
 
 .tick {
   width: 0px;

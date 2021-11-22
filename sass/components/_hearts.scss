@@ -11,15 +11,15 @@
         linear,
         right top,
         left bottom,
-        color-stop(0.4, #9356dc),
-        color-stop(1, #ff79da)
+        color-stop(0.4, map-get($main-colors, color-primary)),
+        color-stop(1, map-get($main-colors, color-secondary))
       );
       background-image: gradient(
         linear,
         right top,
         left bottom,
-        color-stop(0.4, #9356dc),
-        color-stop(1, #ff79da)
+        color-stop(0.4, map-get($main-colors, color-primary)),
+        color-stop(1, map-get($main-colors, color-secondary))
       );
       color: transparent;
       -webkit-background-clip: text;

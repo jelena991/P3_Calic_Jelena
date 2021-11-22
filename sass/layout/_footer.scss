@@ -1,6 +1,6 @@
 .footer {
   background-color: $backgroung-footer;
-  color: #fff;
+  color: map-get($main-colors, color-text-white);
   padding: 35px;
   position: relative;
   &__logo {

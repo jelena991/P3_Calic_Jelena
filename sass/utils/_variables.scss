@@ -9,6 +9,7 @@ $main-colors: (
   color-tertiary: #99e2d0,
   color-tertiary-darkened: darken(#99e2d0, 40%),
   color-icons: #8c8c8c,
+  color-text-white: #fff,
 );
 
 /*BACKGROUND COLORS*/
@@ -16,24 +17,32 @@ $main-colors: (
 $background-lightgrey: #f6f6f6;
 $background-darkergrey: #eaeaea;
 $backgroung-footer: #353535;
-$background-opacity: rgba($backgroung-footer, .5);
-
+$background-opacity: rgba($backgroung-footer, 0.5);
 
 /*SHADOWS*/
 
 $box-shadows: (
-    shadow-light:0px 4px 13px -10px #000000,
-    shadow-dark: 0 1px 5px rgba(104, 104, 104, 0.8),
-    shadow-intro: 0px 0px 10px
-  rgba(
-    $color: #000000,
-    $alpha: 0.25,
-  )
+  shadow-light: 0px 4px 13px -10px #000000,
+  shadow-dark: 0 1px 5px rgba(104, 104, 104, 0.8),
+  shadow-intro: 0px 0px 10px
+    rgba(
+      $color: #000000,
+      $alpha: 0.25,
+    ),
 );
 
 /*BUTTON COLORS*/
-$background-button: linear-gradient(to top, map-get($main-colors, color-primary), map-get($main-colors, color-secondary));
-$background-button-lightend: linear-gradient(to top, map-get($main-colors, color-primary-lightend), map-get($main-colors, color-secondary-lightend));
+
+$background-button: linear-gradient(
+  to top,
+  map-get($main-colors, color-primary),
+  map-get($main-colors, color-secondary)
+);
+$background-button-lightend: linear-gradient(
+  to top,
+  map-get($main-colors, color-primary-lightend),
+  map-get($main-colors, color-secondary-lightend)
+);
 
 /*BREAKPOINTS*/
 

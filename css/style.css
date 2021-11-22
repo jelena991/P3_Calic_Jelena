@@ -4,6 +4,7 @@
 /*BUTTON COLORS*/
 /*BREAKPOINTS*/
 /*DELAYS*/
+/*LOADING SPINNER*/
 @keyframes opacity {
   0% {
     opacity: 1;
@@ -23,6 +24,7 @@
     transform: rotate(1turn);
   }
 }
+/*MENU ITEMS*/
 @keyframes growDown {
   0% {
     transform: scaleY(0);
@@ -121,23 +123,6 @@ body {
   font-family: "Shrikhand", cursive;
 }
 
-.menu-group h2 {
-  padding-top: 30px;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 100;
-}
-.menu-group__item--devider {
-  width: 12%;
-  border: 2px solid #99e2d0;
-  margin-bottom: 25px;
-}
-@media screen and (min-width: 600px) {
-  .menu-group__item--devider {
-    display: none;
-  }
-}
-
 img {
   width: 100%;
 }
@@ -165,6 +150,7 @@ h2 {
   background-color: #f6f6f6;
 }
 
+/*LOCATION OF RESTAURANT*/
 .location {
   display: flex;
   align-items: center;
@@ -179,6 +165,7 @@ h2 {
   margin-left: 15px;
 }
 
+/*PRESETNTATION OF THE COMPANY*/
 .explore__info {
   display: flex;
   flex-direction: column;
@@ -198,6 +185,7 @@ h2 {
   }
 }
 
+/*"how it works" cards*/
 .intro-list-group__items {
   display: flex;
   flex-direction: column;
@@ -299,6 +287,23 @@ h2 {
   }
 }
 
+.menu-group h2 {
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 100;
+}
+.menu-group__item--devider {
+  width: 12%;
+  border: 2px solid #99e2d0;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 600px) {
+  .menu-group__item--devider {
+    display: none;
+  }
+}
+
 .menu-button {
   text-align: center;
 }
@@ -322,6 +327,7 @@ h2 {
   transform-origin: top center;
 }
 
+/*GENERAL CARD DESIGN*/
 .card {
   border-radius: 25px;
   position: relative;
@@ -329,6 +335,7 @@ h2 {
   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
 }
 
+/*CARDS ON HOME PAGE*/
 @media screen and (min-width: 600px) {
   .restaurant__container {
     display: flex;
@@ -387,6 +394,7 @@ h2 {
   font-weight: 100;
 }
 
+/*CARDS ON MENU PAGES*/
 .menu-card {
   background-color: white;
   margin-bottom: 15px;
@@ -424,6 +432,7 @@ h2 {
   align-items: center;
 }
 
+/*CHECKMARK ON CARDS ON MENU PAGES*/
 .tick {
   width: 0px;
   background: #99e2d0;
