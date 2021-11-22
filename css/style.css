@@ -361,7 +361,7 @@ h2 {
 .restaurant__card--image {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  height: 175px;
+  height: 180px;
   width: 100%;
   object-fit: cover;
 }
